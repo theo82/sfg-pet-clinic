@@ -1,4 +1,4 @@
-package theo.tziomakas.sfgpetclinic.model;
+package theo.tziomakas.sfgclinic.model;
 
 import java.time.LocalDate;
 
