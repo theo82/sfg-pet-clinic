@@ -2,11 +2,12 @@ package theo.tziomakas.sfgclinic.services.map;
 
 import theo.tziomakas.sfgclinic.model.Vet;
 import theo.tziomakas.sfgclinic.services.CrudService;
+import theo.tziomakas.sfgclinic.services.VetService;
 
 import java.util.Set;
 
 public class VetServiceMap extends AbstractMapService<Vet, Long>
-                            implements CrudService<Vet, Long> {
+                            implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
