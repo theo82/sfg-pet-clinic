@@ -1,11 +1,12 @@
-package theo.tziomakas.sfgclinic.services.map;
+package theo.tziomakas.sfgpetclinic.services.map;
 
-import theo.tziomakas.sfgclinic.model.Owner;
-import theo.tziomakas.sfgclinic.services.CrudService;
-import theo.tziomakas.sfgclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
+import theo.tziomakas.sfgpetclinic.model.Owner;
+import theo.tziomakas.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

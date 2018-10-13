@@ -1,10 +1,12 @@
-package theo.tziomakas.sfgclinic.services.map;
+package theo.tziomakas.sfgpetclinic.services.map;
 
-import theo.tziomakas.sfgclinic.model.Pet;
-import theo.tziomakas.sfgclinic.services.CrudService;
+import org.springframework.stereotype.Service;
+import theo.tziomakas.sfgpetclinic.model.Pet;
+import theo.tziomakas.sfgpetclinic.services.CrudService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long>
                         implements CrudService<Pet, Long> {
 

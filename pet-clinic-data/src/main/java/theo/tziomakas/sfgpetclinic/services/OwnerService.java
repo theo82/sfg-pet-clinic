@@ -1,8 +1,6 @@
-package theo.tziomakas.sfgclinic.services;
+package theo.tziomakas.sfgpetclinic.services;
 
-import theo.tziomakas.sfgclinic.model.Owner;
-
-import java.util.Set;
+import theo.tziomakas.sfgpetclinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long>  {
 

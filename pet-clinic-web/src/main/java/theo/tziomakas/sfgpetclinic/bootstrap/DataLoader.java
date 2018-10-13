@@ -2,12 +2,10 @@ package theo.tziomakas.sfgpetclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import theo.tziomakas.sfgclinic.model.Owner;
-import theo.tziomakas.sfgclinic.model.Vet;
-import theo.tziomakas.sfgclinic.services.OwnerService;
-import theo.tziomakas.sfgclinic.services.VetService;
-import theo.tziomakas.sfgclinic.services.map.OwnerServiceMap;
-import theo.tziomakas.sfgclinic.services.map.VetServiceMap;
+import theo.tziomakas.sfgpetclinic.model.Owner;
+import theo.tziomakas.sfgpetclinic.model.Vet;
+import theo.tziomakas.sfgpetclinic.services.OwnerService;
+import theo.tziomakas.sfgpetclinic.services.VetService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,11 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public  DataLoader(){
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public  DataLoader(OwnerService ownerService, VetService vetService){
+
+
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

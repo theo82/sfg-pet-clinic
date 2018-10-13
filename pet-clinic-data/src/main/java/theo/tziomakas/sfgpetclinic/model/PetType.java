@@ -1,4 +1,4 @@
-package theo.tziomakas.sfgclinic.model;
+package theo.tziomakas.sfgpetclinic.model;
 
 public class PetType extends BaseEntity{
 

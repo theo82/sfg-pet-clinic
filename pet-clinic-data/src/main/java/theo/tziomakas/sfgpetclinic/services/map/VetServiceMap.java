@@ -1,11 +1,12 @@
-package theo.tziomakas.sfgclinic.services.map;
+package theo.tziomakas.sfgpetclinic.services.map;
 
-import theo.tziomakas.sfgclinic.model.Vet;
-import theo.tziomakas.sfgclinic.services.CrudService;
-import theo.tziomakas.sfgclinic.services.VetService;
+import org.springframework.stereotype.Service;
+import theo.tziomakas.sfgpetclinic.model.Vet;
+import theo.tziomakas.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long>
                             implements VetService {
     @Override

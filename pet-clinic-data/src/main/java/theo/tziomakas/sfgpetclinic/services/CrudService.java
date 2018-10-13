@@ -1,4 +1,4 @@
-package theo.tziomakas.sfgclinic.services;
+package theo.tziomakas.sfgpetclinic.services;
 
 import java.util.Set;
 

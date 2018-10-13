@@ -1,4 +1,4 @@
-package theo.tziomakas.sfgclinic.services.map;
+package theo.tziomakas.sfgpetclinic.services.map;
 
 import java.util.HashMap;
 import java.util.HashSet;
