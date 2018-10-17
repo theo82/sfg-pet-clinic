@@ -12,7 +12,6 @@ public class VetController {
 
     VetService vetService;
 
-
     public VetController(VetService vetService) {
         this.vetService = vetService;
     }
