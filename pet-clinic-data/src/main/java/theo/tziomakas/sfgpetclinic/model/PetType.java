@@ -2,7 +2,6 @@ package theo.tziomakas.sfgpetclinic.model;
 
 public class PetType extends BaseEntity{
 
-
     private String name;
 
     public String getName() {
