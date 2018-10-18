@@ -1,4 +1,6 @@
 package theo.tziomakas.sfgpetclinic.services;
 
-public interface PetTypeService extends CrudService<PetTypeService, Long>{
+import theo.tziomakas.sfgpetclinic.model.PetType;
+
+public interface PetTypeService extends CrudService<PetType, Long>{
 }
