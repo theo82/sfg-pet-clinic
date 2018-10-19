@@ -3,7 +3,6 @@ package theo.tziomakas.sfgpetclinic.services.map;
 import org.springframework.stereotype.Service;
 import theo.tziomakas.sfgpetclinic.model.Speciality;
 import theo.tziomakas.sfgpetclinic.services.SpecialityService;
-
 import java.util.Set;
 
 @Service
