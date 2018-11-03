@@ -1,6 +1,7 @@
 package theo.tziomakas.sfgpetclinic.services.map;
 
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import theo.tziomakas.sfgpetclinic.model.Visit;
 import theo.tziomakas.sfgpetclinic.services.VisitService;
@@ -8,15 +9,28 @@ import theo.tziomakas.sfgpetclinic.services.VisitService;
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class VisitServiceMap extends AbstractMapService<Visit, Long> implements VisitService {
+
     @Override
     public Set<Visit> findAll() {
         return super.findAll();
     }
 
     @Override
-    public void deleteId(Long aLong) {
-        super.deleteById(aLong);
+    public Visit findById(Long id) {
+        return super.findById(id);
+    }
+
+    @Override
+    public Visit save(Visit visit) {
+
+        if(visit.getPet() == null || visit.getPet().getOwner() == null || visit.getPet().getId() == null
+                || visit.getPet().getOwner().getId() == null){
+            throw new RuntimeException("Invalid Visit");
+        }
+
+        return super.save(visit);
     }
 
     @Override
@@ -25,19 +39,7 @@ public class VisitServiceMap extends AbstractMapService<Visit, Long> implements 
     }
 
     @Override
-    public Visit save(Visit visit) {
-
-        if(visit.getPet() == null || visit.getPet().getOwner() == null
-                || visit.getPet().getId() == null || visit.getPet().getOwner().getId() == null){
-
-            throw new RuntimeException("Invalid Visit");
-        }
-
-        return super.save(visit);
-    }
-
-    @Override
-    public Visit findById(Long id) {
-        return super.findById(id);
+    public void deleteId(Long id) {
+        super.deleteById(id);
     }
 }

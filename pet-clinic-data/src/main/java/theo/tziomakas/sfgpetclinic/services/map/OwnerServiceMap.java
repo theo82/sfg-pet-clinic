@@ -1,5 +1,6 @@
 package theo.tziomakas.sfgpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import theo.tziomakas.sfgpetclinic.model.Owner;
 import theo.tziomakas.sfgpetclinic.model.Pet;
@@ -11,6 +12,7 @@ import theo.tziomakas.sfgpetclinic.services.PetTypeService;
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private PetTypeService petTypeService;
@@ -33,8 +35,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
         if(object != null){
 
-            if(object.getPetSet() != null){
-                object.getPetSet().forEach(pet ->{
+            if(object.getPets() != null){
+                object.getPets().forEach(pet ->{
                     if(pet.getPetType() != null){
                         if(pet.getPetType().getId() == null){
                             pet.setPetType(petTypeService.save(pet.getPetType()));
