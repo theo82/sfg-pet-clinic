@@ -42,6 +42,7 @@ class OwnerSDJpaServiceTest {
 
     @BeforeEach
     void setUp() {
+
         returnedOwner = Owner.builder().id(1l).lastName(LAST_NAME).build();
     }
 
