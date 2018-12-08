@@ -2,6 +2,11 @@ package theo.tziomakas.sfgpetclinic.model;
 
 import lombok.*;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,7 +24,10 @@ public class Owner extends Person {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        this.pets = pets;
+        
+        if(pets != null) {
+            this.pets = pets;
+        }
     }
 
 
