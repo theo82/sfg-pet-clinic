@@ -85,11 +85,11 @@ public class PetController {
 
         //owner.getPets().add(pet);
         if (result.hasErrors()) {
+            pet.setOwner(owner);
             model.addAttribute("pet", pet);
             return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
         } else {
-            pet.setOwner(owner);
-            //owner.getPets().add(pet);
+            owner.getPets().add(pet);
             petService.save(pet);
             return "redirect:/owners/" + owner.getId();
         }
