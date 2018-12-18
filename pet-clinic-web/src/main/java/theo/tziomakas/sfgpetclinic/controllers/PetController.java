@@ -79,7 +79,6 @@ public class PetController {
     }
 
     @PostMapping("/pets/{petId}/edit")
-    // TODO: petType is not updated
     public String processUpdateForm(@Valid Pet pet, BindingResult result, Owner owner, Model model) {
         pet.setOwner(owner);
         if (result.hasErrors()) {
